@@ -1,7 +1,8 @@
+#
+# An Alpine Linux container with helper scripts for installing packages
+#
+
 FROM alpine:3.4
 
-CMD ["/bin/sh"]
-
-# Rockerfiles have this, but don't work with Docker Hub
-# ATTACH ["/bin/sh"]
-# PUSH bwstitt/library-alpine:3.4
+ADD ./src/docker-apk-install.sh /usr/local/sbin/docker-apk-install
+RUN chmod 500 /usr/local/sbin/docker-apk-install

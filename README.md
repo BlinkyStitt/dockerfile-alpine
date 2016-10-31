@@ -1,8 +1,7 @@
-Alpine
-======
+# Alpine
 
 Container for Alpine Linux: https://alpinelinux.org/
 
 Check it out on Docker Hub: https://hub.docker.com/r/bwstitt/library-alpine/
 
-I don't currently add anything custom to this image, but one day I might need something.
+This adds a `docker-apk-install` helper for installing packages.
