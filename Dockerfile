@@ -9,7 +9,6 @@ RUN addgroup -g 911 abc \
  && adduser -G abc -D -u 911 abc
 
 # helper to install things and cleanup to keep image sizes down
-ADD ./src/docker-apk-install.sh /usr/local/sbin/docker-apk-install
-RUN chmod 500 /usr/local/sbin/docker-apk-install
+ADD docker-apk-install.sh /usr/local/sbin/docker-apk-install
 
 RUN docker-apk-install su-exec
